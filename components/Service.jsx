@@ -1,9 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import TiltComponent  from './Tilt/TiltComponent';
-const Card = () => {
-  
 
+const Card = () => {
   return (
     <div className='flex flex-col items-center justify-between py-24 bg-background-1'>
       <div className="z-10 max-w-6xl mx-auto w-full items-center justify-center font-mono text-sm py-6 ">
@@ -14,7 +13,7 @@ const Card = () => {
           </p>
         </div>
           <div data-aos="fade-right">
-              <TiltComponent></TiltComponent>
+            <TiltComponent></TiltComponent>
           </div>
       </div>
     </div>

@@ -24,8 +24,8 @@ const HomeComponent = () => {
             <div>
               icons
             </div>
-            <div className='px-8 py-2 mt-6 border-2 inline-block rounded-full text-lg font-medium border-black'>
-              Downoad CV
+            <div className='px-8 py-2 mt-6 border-2 inline-block rounded-full text-lg font-medium border-black hover:bg-black hover:text-white hover:cursor-pointer'>
+              <a href="/Simana-cv.pdf" download>Downoad CV</a>
             </div>
           </div>
           </div>
