@@ -5,6 +5,7 @@ import HomeComponent from '@components/HomeComponent'
 import Portfolio from '@components/Portfolio'
 import Service from '@components/Service'
 import Testimonial from '@components/Testimonial'
+import Timeline from '@components/Timeline'
 import React from 'react'
 
 const page = () => {
@@ -14,9 +15,10 @@ const page = () => {
       <HomeComponent />
       <About />
       <Service />
+      <Timeline/>
       <Portfolio />
-      <Testimonial />
       <Blog />
+      <Testimonial />
       <Contact />
       </div>
     </main>

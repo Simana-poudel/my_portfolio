@@ -5,13 +5,21 @@ import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/Miscellaneous
 import ArticleIcon from '@mui/icons-material/Article';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
+import Image from 'next/image';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Navigation = () => {
   return (
     <div className=''>
-      <div className='z-10 max-w-6xl mx-auto w-full items-center justify-between font-mono text-sm lg:flex flex py-6'>
+      {/* desktop view */}
+      <div className='md:flex hidden z-10 max-w-6xl mx-auto w-full items-center justify-between font-mono text-sm py-6 grid gap-4 grid-col-'>
         <div>
-          Simana
+          <Image 
+          src={'/logo.png'}
+          alt='Simana logo'
+          height={100}
+          width={100}
+          />
         </div>
         <div className='flex'>
           <div className='flex mr-3 px-5 py-3 rounded-lg hover:cursor-pointer	 hover:bg-background-1'>
@@ -45,6 +53,22 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+
+{/* mobile view */}
+      <div className='md:hidden z-10 max-w-6xl mx-auto w-full items-center justify-between font-mono text-sm flex py-4'>
+        <div>
+          <Image 
+          src={'/logo.png'}
+          alt='Simana logo'
+          height={100}
+          width={100}
+          />
+        </div>
+        <div className='mr-4'>
+          <MenuIcon />
+        </div>
+      </div>
+      
     </div>
   )
 }

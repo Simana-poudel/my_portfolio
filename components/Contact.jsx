@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 
 const Contact = () => {
   return (
-    <div className='flex flex-col items-center justify-between py-24 bg-background-1'>
+    <div className='flex flex-col items-center justify-between py-24'>
       <div className="z-10 max-w-6xl mx-auto w-full items-center justify-center font-mono text-sm py-6 ">
         <div className=''>
           <h1 className='text-5xl font-extrabold mb-6'>Contact</h1>
@@ -18,7 +18,7 @@ const Contact = () => {
         </div>
         <div data-aos="fade-right" className='pt-14 grid grid-cols-3 gap-6 '>
           
-          <div className='flex px-8 items-center bg-white py-12'>
+          <div className='flex px-8 items-center bg-background-1 py-12'>
             <div className='bg-blue rounded-full inline-block	h-16 p-4'>
             <LocalPhoneOutlinedIcon/>
             </div>
@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className='flex px-8 items-center bg-white py-12'>
+          <div className='flex px-8 items-center bg-background-1 py-12'>
             <div className='bg-blue rounded-full inline-block	h-16 p-4'>
             <EmailOutlinedIcon/>
             </div>
@@ -46,7 +46,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className='flex px-8 items-center bg-white py-12'>
+          <div className='flex px-8 items-center bg-background-1 py-12'>
             <div className='bg-blue rounded-full inline-block	h-16 p-4'>
             <HomeOutlinedIcon/>
             </div>
@@ -60,7 +60,7 @@ const Contact = () => {
           </div>
         </div>
           <div data-aos="fade-right" className='grid grid-cols-2 gap-4 mt-16 '>
-            <div className='bg-white'>
+            <div className='bg-background-1'>
             <div className='p-8'>
               <div className=''>
                 <p className='mb-5 text-xl text-description'>I am always open to discussing product <br/>

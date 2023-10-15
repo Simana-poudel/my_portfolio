@@ -71,7 +71,9 @@ export default function AboutMeModal() {
                   <p className='text-base font-semibold	text-description'>Languages:<span className='text-blue ml-2'>English, spanish, korean, Hindi</span></p>
                 </div>
               </div>
-              <Button className='hover:bg-black hover:text-white border-black text-text_color text-base font-normal px-7 py-3' variant="outlined">Download CV</Button>
+              <Button className='hover:bg-black hover:text-white border-black text-text_color text-base font-normal px-7 py-3' variant="outlined">
+              <a href="/Simana-cv.pdf" download>Downoad CV</a>
+                </Button>
             </div>
 
             <div>
