@@ -1,4 +1,5 @@
-import React from 'react'
+'use client';
+import React, { useEffect, useState } from 'react'
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import AboutMeModal from './AboutMeModal';
@@ -21,7 +22,24 @@ const getAbouts = async () => {
 
 const About = async () => {
 
-  const {abouts} = await getAbouts();
+  const [abouts, setAbouts] = useState([]); // Initialize state to store abouts data
+
+  useEffect(() => {
+    // Fetch and set the abouts data when the component mounts
+    async function fetchAbouts() {
+      const data = await getAbouts();
+      if (data) {
+        setAbouts(data);
+      }
+    }
+
+    fetchAbouts();
+  }, []);
+
+  if (!abouts.length) {
+    // Render a loading state or handle the absence of data
+    return <div>Loading...</div>;
+  }
   return (
     <>
     {abouts.map(t => (

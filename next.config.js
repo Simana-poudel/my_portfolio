@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true, // Disable Image Optimization
+    domains: ['lh3.googleusercontent.com'],
+
   },
+  experimental: {
+    esmExternals: "loose", // <-- add this
+    serverComponentsExternalPackages: ["mongoose"],
+},
   // output: 'export',
 };
 
