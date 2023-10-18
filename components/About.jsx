@@ -1,45 +1,34 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import Button from '@mui/material/Button';
 import Image from 'next/image';
 import AboutMeModal from './AboutMeModal';
 
-const getAbouts = async () => {
-  try {
-    const res = await fetch('http://localhost:3000/api/about', {
-      cache: "no-store", // so that everytime we hit this end point, we get updated data
-    });
 
-    if(!res.ok) {
-      throw new Error('Failed to fetch topics');
-    }
-
-    return res.json();
-  } catch (error) {
-    console.log("Error loading topics: ", error);
-  }
-}
-
-const About = async () => {
+const About = () => {
 
   const [abouts, setAbouts] = useState([]); // Initialize state to store abouts data
 
+  
   useEffect(() => {
     // Fetch and set the abouts data when the component mounts
     async function fetchAbouts() {
-      const data = await getAbouts();
-      if (data) {
-        setAbouts(data);
-      }
-    }
+      const response = await fetch('/api/about', {
+        cache: "no-store", // so that everytime we hit this end point, we get updated data
+      });
+      const data = await response.json();
+      console.log(data);
+      setAbouts(data.abouts);
+    };
 
     fetchAbouts();
   }, []);
 
-  if (!abouts.length) {
+  if (!abouts) {
     // Render a loading state or handle the absence of data
     return <div>Loading...</div>;
   }
+
+
   return (
     <>
     {abouts.map(t => (
