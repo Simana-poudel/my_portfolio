@@ -1,4 +1,3 @@
-import Navigation from '@components/Navigation'
 import '@styles/globals.css'
 import { AOSInit } from './aos'
 import { Poppins } from 'next/font/google'
@@ -17,7 +16,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <AOSInit />
       <body  className={poppins.className}>
-        <Navigation />
         {children}
       </body>
     </html>

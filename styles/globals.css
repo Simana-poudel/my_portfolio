@@ -33,3 +33,17 @@
     transform: translateX(-50%);
     z-index: 0; /* Ensure the line is above other elements */
   }
+
+  .form_textarea { 
+    @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+
+  }
+
+  .form_question_description {
+    @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+  }
+
+  .form_input {
+    @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+
+  }

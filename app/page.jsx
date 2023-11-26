@@ -3,23 +3,26 @@ import Blog from '@components/Blog'
 import Contact from '@components/Contact'
 import HomeComponent from '@components/HomeComponent'
 import Portfolio from '@components/Portfolio'
-import Service from '@components/Service'
 import Testimonial from '@components/Testimonial'
 import Timeline from '@components/Timeline'
+import Navigation from '@components/Navigation'
 import React from 'react'
+import Projects from '@components/Projects'
 
 const page = () => {
   return (
       <main className="">
       <div >
+      <Navigation />
       <HomeComponent />
       <About />
-      <Service />
+      <Projects />
       <Timeline/>
       <Portfolio />
       <Blog />
       <Testimonial />
       <Contact />
+      
       </div>
     </main>
   )

@@ -3,10 +3,10 @@ import React from 'react'
 
 const HomeComponent = () => {
   return (
-    <div className='flex min-h-screen items-center justify-between bg-background-1'>
+    <div className='flex flex-col items-center justify-between bg-background-1 py-12' id='home'>
       {/* desktop navigation */}
-      <div className="md:flex hidden z-10 max-w-6xl mx-auto w-full items-center justify-center font-mono text-sm flex py-16  ">
-        <div className='flex-col '>
+      <div className="md:flex hidden ">
+        <div className='flex-col max-w-6xl mx-auto w-full items-center justify-center font-mono text-sm flex'>
           <div data-aos="fade-up" className='mb-4 flex justify-center'>
             <div>
               <Image 
@@ -35,7 +35,7 @@ const HomeComponent = () => {
       {/* mobile navigation */}
       <div className="md:hidden z-10 mx-auto w-full items-center justify-center font-mono text-sm flex py-3 ">
         <div className='flex-col '>
-          <div data-aos="fade-up" className='mb-4 flex justify-center'>
+          <div  className='mb-4 flex justify-center'>
             <div>
               <Image 
               className='rounded-full mb-4'

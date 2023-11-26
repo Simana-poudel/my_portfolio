@@ -33,10 +33,10 @@ const About = () => {
     <>
     {abouts.map(t => (
 
-    <div className='flex min-h-screen flex-col items-center justify-between py-24'>
+    <div className='flex min-h-screen flex-col items-center justify-between py-24' id='about'>
       {/* desktop navigation */}
-      <div className="md:flex hidden z-10 max-w-6xl mx-auto w-full items-center justify-center font-mono text-sm py-6 ">
-        <div>
+      <div className="md:flex hidden max-w-6xl mx-auto w-full items-center justify-center font-mono text-sm py-6 ">
+        <div className='overflow-hidden'>
           <div className='font-bold	text-5xl'>About Me</div>
             <div className='flex justify-between pt-12'>
               <div data-aos="fade-right" className='w-1/2'>

@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@formspree/react": "^2.5.1",
     "@mui/icons-material": "^5.14.11",
     "@mui/material": "^5.14.11",
     "aos": "^2.3.4",
@@ -19,7 +20,9 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-parallax-tilt": "^1.7.168"
+    "react-hook-form": "^7.48.2",
+    "react-parallax-tilt": "^1.7.168",
+    "react-scroll": "^1.9.0"
   },
   "devDependencies": {
     "autoprefixer": "latest",

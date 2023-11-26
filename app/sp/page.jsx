@@ -1,7 +1,10 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const Login = () => {
+  const router = useRouter(); // Initialize the useRouter hook
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -17,25 +20,14 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('/api/sp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        // Login successful, you can redirect the user or perform other actions here
-        console.log('Login successful');
-      } else {
-        // Login failed, handle errors accordingly
-        console.error('Login failed');
-      }
-    } catch (error) {
-      console.error('Error:', error);
+  
+    // Check if the entered username and password match the expected values
+    if (formData.username === 'simana' && formData.password === '12345678') {
+      router.push('/sp/admin'); // Use router.push for navigation
+      console.log('Login successful');
+      // You can redirect the user or perform other actions here
+    } else {
+      console.error('Login failed');
     }
   };
 
