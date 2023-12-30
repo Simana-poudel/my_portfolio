@@ -35,8 +35,8 @@ const Contact = () => {
             <div className='flex-col pt-2'>
               <div className='py-2 ml-4'>
                 <h1 className='text-blue font-bold text-xl'>Phone</h1>
-                <p className='text-description'>+9815116528</p>
-                <p className='text-description'>+9815116528</p>
+                <p className='text-description'>+1234567890</p>
+                <p className='text-description'>+1234567890</p>
 
               </div>
             </div>
