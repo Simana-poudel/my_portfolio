@@ -1,4 +1,5 @@
-import Image from "next/image";
+// Timeline.js
+import timelineData from "@data/timelineData";
 import React from "react";
 
 const Timeline = () => {
@@ -13,87 +14,28 @@ const Timeline = () => {
           <div data-aos="fade-right" className="pt-14 relative">
             {/* Create the vertical line */}
             <div className="timeline-line"></div>
-            {/* Add your timeline events or content here */}
-            {/* For example, you can create timeline items */}
-            <div className="">
-              {/* Timeline item 1 */}
-              <div className="timeline-item">
-                {/* Content for timeline item 1 */}
+            {/* Map through timelineData array */}
+            {timelineData.map((item, index) => (
+              <div key={index} className="timeline-item">
                 <div className="flex-col pt-2 mb-10">
                   <div className="py-2 flex">
                     <div className="w-6 h-4 rounded-full border-2 border-black bg-black z-1"></div>
                     <div className="ml-10">
                       <p className="bg-gray-300 rounded-full p-2 text-sm inline-block">
-                        2024-Present
+                        {item.dateRange}
                       </p>
                       <h1 className="text-blue font-bold text-xl">
-                        React Js Developer
-                        <span className="font-normal">BlackTech</span>
+                        {item.position}{" "}
+                        <span className="font-normal">{item.company}</span>
                       </h1>
                       <p className="text-description w-[60%]">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Ea reprehenderit, dolor sed Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Facere autem
-                        reprehenderit sunt dolores architecto assumenda dicta.
-                        Aliquam consequatur nesciunt neque.
+                        {item.description}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* Timeline item 2 */}
-              <div className="timeline-item">
-                {/* Content for timeline item 2 */}
-                <div className="flex-col pt-2 mb-10">
-                  <div className="py-2 flex">
-                    <div className="w-6 h-4 rounded-full border-2 border-black bg-black z-1"></div>
-                    <div className="ml-10">
-                      <p className="bg-gray-300 rounded-full p-2 text-sm inline-block">
-                        2023-2024
-                      </p>
-                      <h1 className="text-blue font-bold text-xl">
-                        Web Developer -{" "}
-                        <span className="font-normal">Websoft</span>
-                      </h1>
-                      <p className="text-description w-[60%]">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Ea reprehenderit, dolor sed Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Facere autem
-                        reprehenderit sunt dolores architecto assumenda dicta.
-                        Aliquam consequatur nesciunt neque.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Timeline item 3 */}
-              <div className="timeline-item">
-                {/* Content for timeline item 2 */}
-                <div className="flex-col pt-2 mb-10">
-                  <div className="py-2 flex">
-                    <div className="w-6 h-4 rounded-full border-2 border-black bg-black z-1"></div>
-                    <div className="ml-10">
-                      <p className="bg-gray-300 rounded-full p-2 text-sm inline-block">
-                        2022-2023
-                      </p>
-                      <h1 className="text-blue font-bold text-xl">
-                        Web Developer -{" "}
-                        <span className="font-normal">Freelancer</span>
-                      </h1>
-                      <p className="text-description w-[60%]">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Ea reprehenderit, dolor sed Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Facere autem
-                        reprehenderit sunt dolores architecto assumenda dicta.
-                        Aliquam consequatur nesciunt neque.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -107,87 +49,28 @@ const Timeline = () => {
           <div data-aos="fade-right" className="pt-14 relative">
             {/* Create the vertical line */}
             <div className="timeline-line"></div>
-            {/* Add your timeline events or content here */}
-            {/* For example, you can create timeline items */}
-            <div className="">
-              {/* Timeline item 1 */}
-              <div className="timeline-item">
-                {/* Content for timeline item 1 */}
+            {/* Map through timelineData array */}
+            {timelineData.map((item, index) => (
+              <div key={index} className="timeline-item">
                 <div className="flex-col pt-2 mb-10">
                   <div className="py-2 flex">
                     <div className="w-6 h-4 rounded-full border-2 border-black bg-black z-1"></div>
                     <div className="ml-10">
                       <p className="bg-gray-300 rounded-full p-2 text-sm inline-block">
-                        2018-Present
+                        {item.dateRange}
                       </p>
                       <h1 className="text-blue font-bold text-xl">
-                        Web Developer -{" "}
-                        <span className="font-normal">Websoft</span>
+                        {item.position}{" "}
+                        <span className="font-normal">{item.company}</span>
                       </h1>
                       <p className="text-description w-[60%]">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Ea reprehenderit, dolor sed Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Facere autem
-                        reprehenderit sunt dolores architecto assumenda dicta.
-                        Aliquam consequatur nesciunt neque.
+                        {item.description}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* Timeline item 2 */}
-              <div className="timeline-item">
-                {/* Content for timeline item 2 */}
-                <div className="flex-col pt-2 mb-10">
-                  <div className="py-2 flex">
-                    <div className="w-6 h-4 rounded-full border-2 border-black bg-black z-1"></div>
-                    <div className="ml-10">
-                      <p className="bg-gray-300 rounded-full p-2 text-sm inline-block">
-                        2017-2022
-                      </p>
-                      <h1 className="text-blue font-bold text-xl">
-                        Web Developer -{" "}
-                        <span className="font-normal">Websoft</span>
-                      </h1>
-                      <p className="text-description w-[60%]">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Ea reprehenderit, dolor sed Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Facere autem
-                        reprehenderit sunt dolores architecto assumenda dicta.
-                        Aliquam consequatur nesciunt neque.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Timeline item 3 */}
-              <div className="timeline-item">
-                {/* Content for timeline item 2 */}
-                <div className="flex-col pt-2 mb-10">
-                  <div className="py-2 flex">
-                    <div className="w-6 h-4 rounded-full border-2 border-black bg-black z-1"></div>
-                    <div className="ml-10">
-                      <p className="bg-gray-300 rounded-full p-2 text-sm inline-block">
-                        2016-2017
-                      </p>
-                      <h1 className="text-blue font-bold text-xl">
-                        Web Developer -{" "}
-                        <span className="font-normal">Websoft</span>
-                      </h1>
-                      <p className="text-description w-[60%]">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Ea reprehenderit, dolor sed Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Facere autem
-                        reprehenderit sunt dolores architecto assumenda dicta.
-                        Aliquam consequatur nesciunt neque.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
